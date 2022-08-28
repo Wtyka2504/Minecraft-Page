@@ -1,0 +1,38 @@
+@import "../colors";
+.gallery {
+  &.hidden {
+    display: none;
+  }
+  &__container {
+    height: 250px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+    &__btn {
+      border: none;
+      color: $green;
+      &:hover {
+        color: $green-light;
+      }
+      &:focus {
+        color: $green-light;
+      }
+      &.disabled {
+        cursor: not-allowed;
+        opacity: 0.25;
+      }
+    }
+  }
+  &__item {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "./_colors.scss";
+.btn {
+  cursor: pointer;
+  border: none;
+  &:hover {
+    border-color: none;
+  }
+  &.btn-back-on-top {
+    color: white;
+  }
+  &.btn-outline {
+    position: relative;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 12px 40px;
+    border-radius: 20px;
+    border: 2px solid $green-very-dark;
+    transition: 150ms color ease-in-out;
+    overflow: hidden;
+    &:hover {
+      color: inherit;
+    }
+  }
+  &.btn-hero {
+    --border-size: 9px;
+    --parrot-height: 120px;
+    position: relative;
+    font-size: 36px;
+    font-weight: 700;
+    background-color: $green;
+    color: white;
+    border: none {
+      top: var(--border-size) solid $green-light;
+      bottom: var(--border-size) solid $green-dark;
+      radius: 0px;
+    }
+    padding: 10px 70px;
+    transition: background-color 250ms ease-in-out,
+      border-color 250ms ease-in-out;
+    &:hover {
+      background-color: lighten($green, 5%);
+      border-top-color: lighten($green-light, 5%);
+      border-bottom-color: lighten($green-dark, 5%);
+    }
+    .parrot {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 1;
+      height: var(--parrot-height);
+      width: auto;
+      cursor: default;
+      transform: translate(25%, calc(-100% + var(--border-size)));
+      transition: 250ms ease-in-out opacity;
+      pointer-events: none;
+    }
+  }
+}

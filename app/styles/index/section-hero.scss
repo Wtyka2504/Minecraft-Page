@@ -1,0 +1,45 @@
+@import "../colors";
+.hero {
+  &__container {
+    background: {
+      color: $green-very-dark;
+      image: url(../../assests/images/bambo-front.png),
+        url(../../assests/images/panda.png),
+        url(../../assests/images/bambo-back.png),
+        url(../../assests/images/bambo-background.png);
+      repeat: no-repeat;
+      position: 90% top, 77% bottom, 70% top, 10% top;
+      size: auto 100%, auto auto, auto 100%, auto 100%;
+    }
+    padding: {
+      top: 75px;
+      bottom: 75px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title {
+    font-size: 96px;
+    font-weight: 800;
+  }
+  &__description {
+    margin: {
+      top: 36px;
+      bottom: 36px;
+    }
+    font-weight: 500;
+    font-size: 24px;
+  }
+  &__overline {
+    width: auto;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+    &:hover + .btn .parrot {
+      opacity: 0.1;
+    }
+  }
+}
