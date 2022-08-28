@@ -36,3 +36,13 @@
     }
   }
 }
+@media (max-width: 576px) {
+  .gallery {
+    &__nav {
+      display: none;
+    }
+    &__item {
+      text-align: center;
+    }
+  }
+}

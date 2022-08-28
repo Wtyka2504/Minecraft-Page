@@ -24,24 +24,21 @@ import Swiper, { Navigation, Autoplay } from "swiper";
     loopedSlides: 3,
     loopedSlidesLimit: false,
     autoplay: {
-      delay: 1500,
+      delay: 2000,
       disableOnInteraction: false,
     },
     breakpoints: {
       0: {
         slidesPerView: 1,
       },
-      700: {
-        slidesPerView: 1.5,
-      },
       900: {
         slidesPerView: 2,
       },
-      1200: {
-        slidesPerView: 2.5,
-      },
       1450: {
         slidesPerView: 3,
+      },
+      1900: {
+        slidesPerView: 4,
       },
     },
   });
