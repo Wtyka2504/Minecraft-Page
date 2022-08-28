@@ -1,0 +1,70 @@
+$font-name: "Lato";
+$fonts: (
+  (
+    src: "../assests/fonts/Lato/Lato-ThinItalic.ttf",
+    weight: 100,
+    format: "TrueType",
+    style: italic,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-Thin.ttf",
+    weight: 100,
+    format: "TrueType",
+    style: normal,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-LightItalic.ttf",
+    weight: 300,
+    format: "TrueType",
+    style: italic,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-Light.ttf",
+    weight: 300,
+    format: "TrueType",
+    style: normal,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-Regular.ttf",
+    weight: 400,
+    format: "TrueType",
+    style: italic,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-BoldItalic.ttf",
+    weight: 700,
+    format: "TrueType",
+    style: italic,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-Bold.ttf",
+    weight: 700,
+    format: "TrueType",
+    style: normal,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-BlackItalic.ttf",
+    weight: 900,
+    format: "TrueType",
+    style: italic,
+  ),
+  (
+    src: "../assests/fonts/Lato/Lato-Black.ttf",
+    weight: 900,
+    format: "TrueType",
+    style: normal,
+  )
+);
+
+@each $map in $fonts {
+  $src: map-get($map, "src");
+  $weight: map-get($map, "weight");
+  $format: map-get($map, "format");
+  $style: map-get($map, "style");
+  @font-face {
+    src: url($src) format($format);
+    font-weight: $weight;
+    font-style: $style;
+    font-family: $font-name;
+  }
+}
